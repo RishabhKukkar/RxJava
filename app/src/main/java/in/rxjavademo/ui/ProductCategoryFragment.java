@@ -22,6 +22,7 @@ import in.rxjavademo.model.productCategory.ProductCategoriesResponse;
 import in.rxjavademo.network.NetworkInterface;
 import in.rxjavademo.network.RetroFitClient;
 import in.rxjavademo.ui.base.BaseFragment;
+import in.rxjavademo.utils.ConstantUtils;
 import in.rxjavademo.utils.dialog.ProgressDialog;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -87,11 +88,11 @@ public class ProductCategoryFragment extends BaseFragment {
     private void addProductsToCart() {
         progressDialog.show();
         AddProductToCart addProductToCart = new AddProductToCart(
-                155,
-                285,
-                1,
-                135,
-                "Rishabh Kukkar",
+                ConstantUtils.USER_ID,
+                ConstantUtils.PRODUCT_QUANTITY_PRICING_ID,
+                ConstantUtils.ITEM_QUANTITY_ID,
+                ConstantUtils.TOTAL_CART_TOTAL,
+                ConstantUtils.USER_UPDATED_BY,
                 false
         );
 
@@ -129,7 +130,7 @@ public class ProductCategoryFragment extends BaseFragment {
     private void getProductsBySubCategoryId() {
         progressDialog.show();
         Observable<ProductsRespose> productsResposeObservable =
-                networkInterface.getProductsBySubCategoryId(94)
+                networkInterface.getProductsBySubCategoryId(ConstantUtils.SUB_CATEGORY_ID)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread());
 
