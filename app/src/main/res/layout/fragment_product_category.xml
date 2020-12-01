@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fProductCategoryTVResponse"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:isScrollContainer="true"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/fProductCategoryMBTCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fProductCategoryMBTCategory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/get_all_categories"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/fProductCategoryAddProductToCart"
+        app:layout_constraintEnd_toStartOf="@+id/fProductCategoryMBTProducts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fProductCategoryAddProductToCart" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fProductCategoryMBTProducts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/get_all_produts"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/fProductCategoryAddProductToCart"
+        app:layout_constraintEnd_toStartOf="@+id/fProductCategoryAddProductToCart"
+        app:layout_constraintStart_toEndOf="@+id/fProductCategoryMBTCategory"
+        app:layout_constraintTop_toTopOf="@+id/fProductCategoryAddProductToCart" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fProductCategoryAddProductToCart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/add_product_to_cart"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fProductCategoryMBTProducts" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

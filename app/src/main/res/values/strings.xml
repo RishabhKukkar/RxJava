@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RXJavaDemo</string>
+    <string name="please_wait">Please Wait..</string>
+    <string name="get_all_categories">Get All Categories</string>
+    <string name="get_all_produts">Get All Produts</string>
+    <string name="add_product_to_cart">Add Product To Cart</string>
+</resources>
